@@ -5,13 +5,38 @@ let amigos = [];
 
 //Crear una función que permita ingresar un nombre y agregarlo a la lista de amigos
 function agregarAmigo() {
-    let amigoIngresado = document.getElementById('amigo').value;
+    let amigoIngresado = document.getElementById('amigo').value.trim();
     
     if (amigoIngresado == '') {
         alert("Por favor, inserte un nombre.");
+    } else if (amigos.includes(amigoIngresado)) {
+        alert("El nombre ingresado ya existe. Por favor, no repita exactamente el mismo nombre.");
     } else {
         amigos.push(amigoIngresado);
+        actualizarListaAmigos();
         limpiarCaja();
+    }
+}
+
+//Función para actualizar la lista de amigos
+function actualizarListaAmigos() {
+    let lista = document.getElementById('listaAmigos');
+    lista.innerHTML = '';
+    for (let i=0; i < amigos.length; i++) {
+        let nuevoAmigo = document.createElement('li');
+        nuevoAmigo.textContent = amigos[i];
+        lista.appendChild(nuevoAmigo);
+    }    
+}
+
+//Función para sortear amigo
+function sortearAmigo() {
+    if (amigos.length > 0) {
+        let indiceAleatorio = Math.floor(Math.random() * (amigos.length));
+        let amigoResultado = document.getElementById('resultado');
+        return amigoResultado.innerHTML = amigos[indiceAleatorio];
+    } else {
+        return alert('Por favor, inserte los nombres primero.');
     }
 }
 
