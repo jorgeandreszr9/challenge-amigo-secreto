@@ -6,9 +6,11 @@ let amigos = [];
 //Crear una función que permita ingresar un nombre y agregarlo a la lista de amigos
 function agregarAmigo() {
     let amigoIngresado = document.getElementById('amigo').value.trim();
-    
+
     if (amigoIngresado == '') {
         alert("Por favor, inserte un nombre.");
+    } else if (!validarNombre(amigoIngresado)) {
+        alert("Por favor, ingrese sólo letras y espacios.");
     } else if (amigos.includes(amigoIngresado)) {
         alert("El nombre ingresado ya existe. Por favor, no repita exactamente el mismo nombre.");
     } else {
@@ -38,6 +40,12 @@ function sortearAmigo() {
     } else {
         return alert('Por favor, inserte los nombres primero.');
     }
+}
+
+//Crear uns función con expresiones regulares, para validar que sólo ingresen letras, acentos o espacios
+function validarNombre(nombre) {
+    let regex = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/;
+    return regex.test(nombre);
 }
 
 //Crear una función para limpiar la caja
