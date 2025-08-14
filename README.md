@@ -70,9 +70,21 @@ function limpiarCaja()
 3. No se permiten nombres repetidos.
 4. Los nombres se agregan tal como se ingresan.
 
+## 🎲 Ejecutar juego
+A través de GitHub Pages, está disponible el enlace para ejecutar el proyecto realizado: https://jorgeandreszr9.github.io/challenge-amigo-secreto/
+
 ## 📷 Ejemplo de uso
 1. El usuario escribe ``Lola López``` en el campo de texto.
+<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/f119812a-cedb-494a-ae55-24f3ecca6979" />
+
 2. Presiona **Añadir**.
+<img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/1b36562b-8103-4daf-b42e-5b7214ece5a9" />
+
 3. El nombre aparece en la lista.
+<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/e424ed44-663f-4dab-854c-52bb1406353a" />
+
 4. Puede seguir agregando más amigos.
+<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/70b07366-aa36-48da-b099-e67fb0df2119" />
+
 5. Al presionar **Sortear Amigo**, aparece un nombre aleatorio de la lista.
+<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/8a84c048-aff1-445c-b605-3322324a3712" />
