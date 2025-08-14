@@ -11,7 +11,7 @@ function agregarAmigo() {
         alert("Por favor, inserte un nombre.");
     } else if (!validarNombre(amigoIngresado)) {
         alert("Por favor, ingrese sólo letras y espacios.");
-    } else if (amigos.includes(amigoIngresado)) {
+    } else if ( amigos.map(a => a.toLowerCase()).includes(amigoIngresado.toLowerCase()) ) {
         alert("El nombre ingresado ya existe. Por favor, no repita exactamente el mismo nombre.");
     } else {
         amigos.push(amigoIngresado);
